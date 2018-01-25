@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="mainContainer" prefHeight="600.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MapViewerController">
+   <top>
+      <MenuBar prefHeight="25.0" prefWidth="561.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="saveButton" mnemonicParsing="false" onAction="#save" text="Save" />
+                  <MenuItem fx:id="saveAsButton" mnemonicParsing="false" onAction="#saveAs" text="Save As" />
+                  <MenuItem fx:id="openButton" mnemonicParsing="false" onAction="#open" text="Open" />
+                  <MenuItem fx:id="launchGameButton" mnemonicParsing="false" onAction="#launchGame" text="Launch Game" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="closeButton" mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Insert">
+            <items>
+                  <MenuItem fx:id="insertAxeButton" mnemonicParsing="false" onAction="#insertAxe" text="Axe" />
+                  <MenuItem fx:id="insertBoatButton" mnemonicParsing="false" onAction="#insertBoat" text="Boat" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutButton" mnemonicParsing="false" onAction="#about" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
